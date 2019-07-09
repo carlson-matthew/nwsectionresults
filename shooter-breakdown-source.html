@@ -1,79 +1,111 @@
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-body {
-	font-family: "Segoe UI",Arial,sans-serif;
-}
-div.headerContainer {
-	font-weight: bold;
-	font-size: 3em;
-    background-color: lightgrey;
-}
-span.divisionUniqueShooters {
-	font-weight: normal;
-	font-size: .6em;
-}
-span.classUniqueShooters {
-	font-weight: normal;
-	font-size: .6em;
-}
-div.descriptionContainer {
-	padding-bottom:1cm;
-	font-size: 1.3em;
-}
-div.divisionContainer {
-}
-div.divisionHeaderContainer {
-	font-weight: bold;
-	font-size: 2em;
-    background-color: lightgrey;
-}
-div.divisionBodyContainer {
+<!doctype html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-}
-div.classContainer {
-	padding-left: 1cm; 
-}
-div.classHeaderContainer {
-	font-weight: bold;
-	font-size: 1.4em;
-}
-div.classBodyContainer{
+    <title>Shooter Breakdown ([season])</title>
 
-}
-div.resultLinks{
-	font-weight: bold;
-	font-size: 1.5em;
-}
-table {
-    border-collapse: collapse;
-}
+    <!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	
+	<style>
+		body {
+			min-height: 75rem;
+			padding-top: 4.5rem;
+		}
+	</style>
+	<!--
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.18/b-1.5.6/b-colvis-1.5.6/b-html5-1.5.6/b-print-1.5.6/cr-1.5.0/fh-3.1.4/kt-2.5.0/rr-1.2.4/sc-2.0.0/datatables.min.css"/> </head>
+	-->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-3.3.1/jszip-2.5.0/dt-1.10.18/b-1.5.6/b-colvis-1.5.6/b-html5-1.5.6/b-print-1.5.6/cr-1.5.0/fh-3.1.4/kt-2.5.0/rr-1.2.4/sc-2.0.0/datatables.min.css"/>
+  <body>
 
-th, td {
-    text-align: left;
-    padding: 8px;
-}
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">NW Section Championship Series Results</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+		  <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="/[season]/index.html" id="interSeasonNav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Season</a>
+            <div class="dropdown-menu" aria-labelledby="interSeasonNav">
+              <a class="dropdown-item" href="/[season]/index.html">[season]</a>
+              <a class="dropdown-item" href="/2018/index.html">2018</a>
+              <a class="dropdown-item" href="/2017/index.html">2017</a>
+			  <a class="dropdown-item" href="/2016/index.html">2016</a>
+            </div>
+          </li>
+		  <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="/[season]/index.html" id="intraSeasonNav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">[season] Season</a>
+            <div class="dropdown-menu" aria-labelledby="intraSeasonNav">
+			  <a class="dropdown-item" href="/[season]/index.html">[season] Home</a>
+              <a class="dropdown-item" href="./leaderboard.html">Leaderboards</a>
+              <a class="dropdown-item" href="./standingByDivision.html">Standings by Division</a>
+              <a class="dropdown-item" href="./standingByClass.html">Standings by Class</a>
+			  <a class="dropdown-item" href="./awards.html">Award Qualifications</a>
+			  <a class="dropdown-item" href="./shooter-breakdown.html">Shooter Breakdown</a>
+			  <a class="dropdown-item" href="./finalstandingsraw.html">Final Standings Raw</a>
+            </div>
+          </li>
+		  <li class="nav-item active">
+            <a class="nav-link" href="/faq.html">F.A.Q.<span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main role="main" class="container">
+      <div class="jumbotron">
+        <h1>Shooter Breakdown ([season])</h1>
+        <p class="lead">Information about shooter attendance, division and class breakdown can be found below.</p>
+        </br>
+		<b>TotalUniqueShooters</b> - A shooter will count against this total if they shot in a division or class at one or more matches this season.</br>
+		<b>TotalEligibleShooters</b> - A shooter will count against this total if they had enough section scores to count for the series.</br>
+		<b>TotalEligibleSectionShooters</b> - A shooter will count against this total if they had enough section scores to count for the series AND they are a member of the section.</br>
+		</br>
+		<p>
+		[shooterBreakdown]
+		</p>
+	  </div>
+    </main>
 
-tr:nth-child(even){background-color: #f2f2f2}
 
-th {
-    background-color: grey;
-    color: white;
-}
-</style>
-</head>
-<body>
-<div class="headerContainer">NW Section 2019 - Shooter Breakdown</div>
-<div class="descriptionContainer">Information about shooter attendance, division and class breakdown can be found below.</br>
-</br>
-<b>TotalUniqueShooters</b> - A shooter will count against this total if they shot in a division or class at one or more matches this season.</br>
-<b>TotalEligibleShooters</b> - A shooter will count against this total if they had enough section scores to count for the series.</br>
-<b>TotalEligibleSectionShooters</b> - A shooter will count against this total if they had enough section scores to count for the series AND they are a member of the section.</br>
-</div>
-<br/>
-<p>
-[shooterBreakdown]
-</p>
-</body>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-3.3.1/jszip-2.5.0/dt-1.10.18/b-1.5.6/b-colvis-1.5.6/b-html5-1.5.6/b-print-1.5.6/cr-1.5.0/fh-3.1.4/kt-2.5.0/rr-1.2.4/sc-2.0.0/datatables.min.js"></script>
+
+	<script>
+		$(document).ready( function () {
+			$('#table_id').DataTable( {
+				paging: false,
+				dom: 'Bfrtip',
+				buttons: [
+					{
+						extend: 'excel',
+						text: 'Export to Excel',
+						filename: 'shooterBreakdown_final_[season]',
+						sheetName: 'SeriesResults'
+					},
+					{
+						extend: 'csvHtml5',
+						text: 'Export to CSV',
+						filename: 'shooterBreakdown_final_[season]'
+					}
+				]
+			} );
+			
+		} );
+	</script>
+  </body>
 </html>
+
