@@ -1,106 +1,128 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<style>
-body {
-	font-family: "Segoe UI",Arial,sans-serif;
-}
-div.headerContainer {
-	font-weight: bold;
-	font-size: 3em;
-    background-color: lightgrey;
-}
-span.divisionUniqueShooters {
-	font-weight: normal;
-	font-size: .6em;
-}
-span.classUniqueShooters {
-	font-weight: normal;
-	font-size: .6em;
-}
-div.descriptionContainer {
-	padding-bottom:1cm;
-	font-size: 1.3em;
-}
-div.divisionContainer {
-}
-div.divisionHeaderContainer {
-	font-weight: bold;
-	font-size: 2em;
-    background-color: lightgrey;
-}
-div.divisionBodyContainer {
+	<style>
+		body {
+			font-family: "Segoe UI", Arial, sans-serif;
+		}
 
-}
-div.classContainer {
-	padding-left: 1cm; 
-}
-div.classHeaderContainer {
-	font-weight: bold;
-	font-size: 1.4em;
-}
-div.classBodyContainer{
+		div.headerContainer {
+			font-weight: bold;
+			font-size: 3em;
+			background-color: lightgrey;
+		}
 
-}
-div.resultLinks{
-	font-weight: bold;
-	font-size: 1.5em;
-}
-table {
-    border-collapse: collapse;
-}
+		span.divisionUniqueShooters {
+			font-weight: normal;
+			font-size: .6em;
+		}
 
-th, td {
-    text-align: left;
-    padding: 8px;
-}
+		span.classUniqueShooters {
+			font-weight: normal;
+			font-size: .6em;
+		}
 
-tr:nth-child(even){background-color: #f2f2f2}
+		div.descriptionContainer {
+			padding-bottom: 1cm;
+			font-size: 1.3em;
+		}
 
-th {
-    background-color: grey;
-    color: white;
-}
-</style>
+		div.divisionContainer {}
+
+		div.divisionHeaderContainer {
+			font-weight: bold;
+			font-size: 2em;
+			background-color: lightgrey;
+		}
+
+		div.divisionBodyContainer {}
+
+		div.classContainer {
+			padding-left: 1cm;
+		}
+
+		div.classHeaderContainer {
+			font-weight: bold;
+			font-size: 1.4em;
+		}
+
+		div.classBodyContainer {}
+
+		div.resultLinks {
+			font-weight: bold;
+			font-size: 1.5em;
+		}
+
+		table {
+			border-collapse: collapse;
+		}
+
+		th,
+		td {
+			text-align: left;
+			padding: 8px;
+		}
+
+		tr:nth-child(even) {
+			background-color: #f2f2f2
+		}
+
+		th {
+			background-color: grey;
+			color: white;
+		}
+	</style>
 </head>
+
 <body>
-<div class="headerContainer">NW Section [season] - Results</div>
-<p>
-<b>Qualification Note:</b> This year, there is a required minimum of 4 scoring section matches to qualify for a series score.
-Series scores are calculated by taking a shooter's top 4 overall division percentages and averaging them. Standings are then determined using this averaged score.</br>
-</br>
-If you have any questions on how your score was calculated or how many qualifying match scores you had please refer to one of the following:</br>
-- The <a href="/finalstandingsraw.html">Final Standings Raw</a> page is an unsorted list of all shooters and their series scores. It also contains detailed information about which match scores were used in the series score calculation.</br>
-- The excel document also has sheet called 'FinalStanding-All' with the same informaton. </br>
-</p>
-<div class="resultLinks">
+	<div class="headerContainer">NW Section [season] - Results</div>
 	<p>
-		<b>Standings and Awards:</b></br>
-		- <a href="/standingByDivision.html">Standings by Division</a><br/>
-		- <a href="/standingByClass.html">Standings by Class</a><br/>
-		- <a href="/awards.html">Award Qualifications</a><br/>
+		<b>Qualification Note:</b> This year, there is a required minimum of 4 scoring section matches to qualify for a
+		series score.
+		Series scores are calculated by taking a shooter's top 4 overall division percentages and averaging them.
+		Standings are then determined using this averaged score.</br>
+		</br>
+		If you have any questions on how your score was calculated or how many qualifying match scores you had please
+		refer to one of the following:</br>
+		- The <a href="/finalstandingsraw.html">Final Standings Raw</a> page is an unsorted list of all shooters and
+		their series scores. It also contains detailed information about which match scores were used in the series
+		score calculation.</br>
+		- The excel document also has sheet called 'FinalStanding-All' with the same informaton. </br>
 	</p>
-	</br>
+	<div class="resultLinks">
+		<p>
+			<b>Standings and Awards:</b></br>
+			- <a href="/standingByDivision.html">Standings by Division</a><br />
+			- <a href="/standingByClass.html">Standings by Class</a><br />
+			- <a href="/awards.html">Award Qualifications</a><br />
+		</p>
+		</br>
+		<p>
+			<b>Additional Stats and Data:</b></br>
+			- <a href="/finalstandingsraw.html">Final Standings Raw</a><br />
+			- <a href="https://1drv.ms/x/s!AtmVAPA3L3kOpnaFzXBLlwPmBv1L">Results Excel Spreadsheet</a> <a
+				href="/NWSection_2016_Standings.xlsx">(Direct Download)</a><br />
+			- <a href="/shooter-breakdown.html">Shooter Breakdown</a><br />
+			- <a href="/stats.html">Additional Stats</a><br />
+			- <a href="/faq.html">FAQ</a><br />
+		</p>
+	</div>
+	<br />
 	<p>
-		<b>Additional Stats and Data:</b></br>
-		- <a href="/finalstandingsraw.html">Final Standings Raw</a><br/>
-		- <a href="https://1drv.ms/x/s!AtmVAPA3L3kOpnaFzXBLlwPmBv1L">Results Excel Spreadsheet</a> <a href="/NWSection_2016_Standings.xlsx">(Direct Download)</a><br/>
-		- <a href="/shooter-breakdown.html">Shooter Breakdown</a><br/>
-		- <a href="/stats.html">Additional Stats</a><br/>
-		- <a href="/faq.html">FAQ</a><br/>
+		[matchListTable]
 	</p>
-</div>
-<br/>
-<p>
-[matchListTable]
-</p>
-<p>
-</br>
-<b>Questions?</b> If you have any questions about the scores please feel free to PM Matt Carlson on Facebook and please check the <a href="/faq.html">FAQ</a> as well.
-</br>
-</br>
-This website was generated by code found on this <a href="https://github.com/carlson-matthew/nwsectionresults-gen">Github repo.</a></br>
-The raw site files can be found at this <a href="https://github.com/carlson-matthew/nwsectionresults">Github repo.</a>
-</p>
+	<p>
+		</br>
+		<b>Questions?</b> If you have any questions about the scores please feel free to PM Matt Carlson on Facebook and
+		please check the <a href="/faq.html">FAQ</a> as well.
+		</br>
+		</br>
+		This website was generated by code found on this <a
+			href="https://github.com/carlson-matthew/nwsectionresults-gen">Github repo.</a></br>
+		The raw site files can be found at this <a href="https://github.com/carlson-matthew/nwsectionresults">Github
+			repo.</a>
+	</p>
 </body>
+
 </html>
